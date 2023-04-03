@@ -1,0 +1,8 @@
+.Home {
+	text-align: center;
+}
+.Home .iframe{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto; 
+}
