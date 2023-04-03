@@ -1,13 +1,13 @@
 import { ChangeEvent, useEffect, useState } from "react";
-import { RickAndMortyModel } from "../../../Models/Rickandmortymodel";
+import { ResultModel, RickAndMortyModel } from "../../../Models/Rickandmortymodel";
 import "./Rickandmorty.css";
 import axios from "axios";
 import RickAndMortyCard from "../RickAndMortyCard/RickAndMortyCard";
 
 function Rickandmorty(): JSX.Element {
-    
+
     const tableHeaders = ["Id", "Name", "Status", "Species", "Img"];
-  const [char, setChar] = useState<RickAndMortyModel[]>([]);
+  const [char, setChar] = useState<ResultModel[]>([]);
  const [filtertext, setFiltertext] = useState<string>("");
 
  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,10 +22,9 @@ function Rickandmorty(): JSX.Element {
                    });
 
            useEffect(() => {
-                 axios
-                   .get<RickAndMortyModel[]>("https://rickandmortyapi.com/api/character")
+                 axios.get<RickAndMortyModel>("https://rickandmortyapi.com/api/character")
                    .then((res) => {
-                     setChar(res.data);
+                     setChar(res.data.results)
                    })
                    .catch((err) => {
                      console.log(err);

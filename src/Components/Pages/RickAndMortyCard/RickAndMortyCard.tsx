@@ -1,8 +1,8 @@
-import { RickAndMortyModel } from "../../../Models/Rickandmortymodel";
+import { ResultModel, RickAndMortyModel } from "../../../Models/Rickandmortymodel";
 import "./RickAndMortyCard.css";
 
 interface RickAndMortyCardProps{
-    rickandmorty:RickAndMortyModel;
+    rickandmorty:ResultModel;
 }
 function RickAndMortyCard(props: RickAndMortyCardProps): JSX.Element {
     return (

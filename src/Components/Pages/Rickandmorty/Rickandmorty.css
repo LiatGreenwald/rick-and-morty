@@ -3,7 +3,7 @@
 }
 
 .Rickandmorty .cards-display {
-    background-color: yellow;
+    background-color: #ff0000;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
