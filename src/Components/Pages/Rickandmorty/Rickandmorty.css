@@ -1,4 +1,4 @@
-.Rickandmorty {
+/* .Rickandmorty {
 	
 }
 
@@ -47,10 +47,7 @@
     text-align: right;
   }
 
-  @media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
+ 
 
     tbody td:before {
       content: attr(data-label);
@@ -60,10 +57,47 @@
       margin-bottom: 10px;
       text-align: right;
     }
-  }
-
+ 
   
 .Rickandmorty img {
     width: 80px;
     height: 50px;
-} 
+}  */
+
+.Rickandmorty {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cards-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .cards-display > * {
+    margin-bottom: 0;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  
+  
+  

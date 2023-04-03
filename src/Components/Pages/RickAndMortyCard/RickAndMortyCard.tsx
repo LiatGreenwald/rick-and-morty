@@ -8,10 +8,10 @@ function RickAndMortyCard(props: RickAndMortyCardProps): JSX.Element {
     return (
         <div className="RickAndMortyCard">
             
-			<p>{props.rickandmorty.id}</p>
-            <p>{props.rickandmorty.name}</p>
-            <p>{props.rickandmorty.status}</p>
-            <p>{props.rickandmorty.species}</p>
+			<p>ID: {props.rickandmorty.id}</p>
+            <p>Name: {props.rickandmorty.name}</p>
+            <p>Status: {props.rickandmorty.status}</p>
+            <p>Species: {props.rickandmorty.species}</p>
             <img src={props.rickandmorty.image} alt={props.rickandmorty.name}/>{""}
         </div>
     );
